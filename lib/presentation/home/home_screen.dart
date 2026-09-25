@@ -1,11 +1,18 @@
 import 'package:contador/presentation/buttons/button_screen.dart';
 import 'package:contador/presentation/downTab/downTab_screen.dart';
 import 'package:contador/presentation/layout/drawer_custom.dart';
+import 'package:contador/presentation/petition/petition_screen.dart';
 import 'package:contador/presentation/text/screens/text_screen.dart';
 import 'package:contador/presentation/upTab/upTab_screen.dart';
 import 'package:flutter/material.dart';
 
-const menu = [UptabScreen(), DowntabScreen(), ButtonScreen(), TextScreen()];
+const menu = [
+  UptabScreen(),
+  DowntabScreen(),
+  ButtonScreen(),
+  TextScreen(),
+  PetitionScreen(),
+];
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -58,6 +65,17 @@ class HomeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => menu[3]),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Petition Screen'),
+            subtitle: Text('initial configure petition'),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => menu[4]),
               );
             },
           ),

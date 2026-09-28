@@ -1,5 +1,8 @@
 import 'package:contador/presentation/buttons/button_screen.dart';
 import 'package:contador/presentation/downTab/downTab_screen.dart';
+import 'package:contador/presentation/infinty/infinity_screen.dart';
+import 'package:contador/presentation/infinty/infiny_page_screen.dart';
+import 'package:contador/presentation/infinty/instagram_page.dart';
 import 'package:contador/presentation/layout/drawer_custom.dart';
 import 'package:contador/presentation/petition/petition_screen.dart';
 import 'package:contador/presentation/text/screens/text_screen.dart';
@@ -12,6 +15,9 @@ const menu = [
   ButtonScreen(),
   TextScreen(),
   PetitionScreen(),
+  InfinityScreen(),
+  InstagramPage(),
+  InfinityPageScreen(),
 ];
 
 class HomeScreen extends StatelessWidget {
@@ -76,6 +82,42 @@ class HomeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => menu[4]),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text('Infinity Screen'),
+            subtitle: Text('initial configure petition'),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => menu[5]),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text('Infinity Page Screen'),
+            subtitle: Text('initial configure petition'),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => menu[6]),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text('Infinity Page Screen'),
+            subtitle: Text('initial configure petition'),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => menu[7]),
               );
             },
           ),

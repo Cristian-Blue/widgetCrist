@@ -3,6 +3,7 @@ import 'package:contador/presentation/downTab/downTab_screen.dart';
 import 'package:contador/presentation/infinty/infinity_screen.dart';
 import 'package:contador/presentation/infinty/infiny_page_screen.dart';
 import 'package:contador/presentation/infinty/instagram_page.dart';
+import 'package:contador/presentation/infinty/page_screen.dart';
 import 'package:contador/presentation/layout/drawer_custom.dart';
 import 'package:contador/presentation/petition/petition_screen.dart';
 import 'package:contador/presentation/text/screens/text_screen.dart';
@@ -18,6 +19,7 @@ const menu = [
   InfinityScreen(),
   InstagramPage(),
   InfinityPageScreen(),
+  PageScreen(),
 ];
 
 class HomeScreen extends StatelessWidget {
@@ -118,6 +120,18 @@ class HomeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => menu[7]),
+              );
+            },
+          ),
+
+          ListTile(
+            title: Text('PAGE VIEW'),
+            subtitle: Text('page view petitions '),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => menu[8]),
               );
             },
           ),

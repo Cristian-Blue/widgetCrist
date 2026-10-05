@@ -57,22 +57,8 @@ class InfinityPageScreen extends StatefulWidget {
 }
 
 class _InfinityPageScreenState extends State<InfinityPageScreen> {
-  // Lista inicial de imágenes.
-  //
-  // Posteriormente iremos agregando nuevos elementos
-  // mediante _loadMore().
   List<int> imagesId = [1, 2, 3, 4, 5];
-
-  // Controlador del PageView.
-  //
-  // Nos permite controlar el PageView y conocer
-  // la página actual.
   final PageController _pageController = PageController();
-
-  // Indica si actualmente estamos cargando
-  // nuevos elementos.
-  //
-  // Evita ejecutar varias cargas al mismo tiempo.
   bool isLoading = false;
 
   @override

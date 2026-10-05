@@ -1,5 +1,6 @@
 import 'package:contador/presentation/buttons/button_screen.dart';
 import 'package:contador/presentation/downTab/downTab_screen.dart';
+import 'package:contador/presentation/forms/form_screen.dart';
 import 'package:contador/presentation/infinty/infinity_screen.dart';
 import 'package:contador/presentation/infinty/infiny_page_screen.dart';
 import 'package:contador/presentation/infinty/instagram_page.dart';
@@ -20,6 +21,7 @@ const menu = [
   InstagramPage(),
   InfinityPageScreen(),
   PageScreen(),
+  FormScreen(),
 ];
 
 class HomeScreen extends StatelessWidget {
@@ -132,6 +134,17 @@ class HomeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => menu[8]),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Forms VIEW'),
+            subtitle: Text('page view petitions '),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => menu[9]),
               );
             },
           ),

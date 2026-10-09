@@ -138,10 +138,13 @@ class __FormCustomState extends State<_FormCustom> {
             onSaved: (newValue) => son = int.tryParse(newValue ?? '') ?? 0,
           ),
           DropdownButtonFormField<String>(
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            hint: Text('Seleccione'),
             items: optionsType
                 .map((e) => DropdownMenuItem(value: e, child: Text(e)))
                 .toList(),
             onChanged: (_) => {},
+            validator: (value) => value == null ? 'field required' : null,
 
             onSaved: (newValue) => music = newValue ?? '',
             decoration: const InputDecoration(labelText: "Tipo de canción"),
